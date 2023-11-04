@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatble" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <nav>
+            <img src="images/Margaterra Company (7).png" class="logo">
+            <ul>    
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Portfolio</p>
+            <h1>Hi,I'm <span>Kamil!</span></h1>
+        </div>
+    </div>
+    <!----------------about---------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/IMG20231014172621.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        
+                        I am a passionate and ambitious individual with a wide range of interests, including business, bodybuilding, basketball, fashion, and trying new things. My ultimate goal is to start and successfully run my own business, and I am constantly looking for new ways to learn and grow.
+                        
+                        I believe that fashion is a powerful tool for boosting confidence and self-expression, and I enjoy experimenting with different styles and trends. I also love staying active and healthy, and I play basketball regularly. In addition, I am a dedicated bodybuilder, and I enjoy pushing myself to achieve my fitness goals.
+                        
+                        I am always eager to try new things and learn new skills. I am confident that my diverse interests and experiences will make me a successful entrepreneur in the future. </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"onclick="opentab('education')">Education</p>
+                            <p class="tab-links"onclick="opentab('contacts')">Contacts</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Coding</span><br>C/C++ Website microbit<br></li>
+                                <li><span>Physical</span><br>Basketball running(10kl+)<br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Grade 1-6</span><br>Sarasas Suksawad School  <br></li>
+                                <li><span>Grade 7-12</span><br>Suankularb Wittayalai Thonburi School<br></li>
+                            </ul>   
+                        </div>
+                        <div class="tab-contents" id="contacts">
+                            <ul>    
+                                <li><span>Instagram</span><br>k_amil.pa<br></li>
+                                <li><span>Facebook</span><br>Kamil Pattanasakulloy<br></li>
+                                <li><span>Line</span><br>=_=kamil<br></li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
